@@ -45,7 +45,7 @@ This means we made the following changes to the variable names:
 | std | StandardDeviation |
 | mean | MeanValue |
 
-This is written to the file ```tidy1.csv```.
+This data is then written to the file ```tidy1.csv```.
 
 #### 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 This is written to the file ```tidy2.csv```.
