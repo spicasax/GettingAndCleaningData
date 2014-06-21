@@ -28,7 +28,7 @@ From the ```features_info.txt``` file, we have the following description of the 
 The following transformations of the original data set were performed:
 
 #### 1. Merges the training (```x_train.txt, y_train.txt, subject_train.txt```) and the test (```x_test.txt, y_test.txt, subject_test.txt```) sets to create one data set (```data```).
-We used cbind and rbind to preserve the order of the data as much as possible, in case that was needed.
+We used ```cbind``` and ```rbind``` to preserve the order of the data as much as possible, in case that was needed.
 #### 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
 These were variables whose names contained either ```mean``` or ```std```. We used ```grep``` to pull only those columns and combine with the first two columns.
 #### 3. Uses descriptive activity names to name the activities in the data set. 
