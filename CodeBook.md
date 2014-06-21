@@ -1,6 +1,6 @@
 # Original Data
 
-The data for this assignment is data collected from the accelerometers from the Samsung Galaxy S II smartphone. A complete description of the data is available at the original website: (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+The data for this assignment is data collected from the accelerometers and gyroscopes from the Samsung Galaxy S II smartphone. A complete description of the data is available at the original website: (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 From the original description of the dataset:
 
@@ -28,8 +28,9 @@ From the ```features_info.txt``` file, we have the following description of the 
 The following transformations of the original data set were performed:
 
 #### 1. Merges the training (```x_train.txt, y_train.txt, subject_train.txt```) and the test (```x_test.txt, y_test.txt, subject_test.txt```) sets to create one data set (```data```).
+We used cbind and rbind to preserve the order of the data as much as possible, in case that was needed.
 #### 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-These were variables whose names contained either ```mean``` or ```std```.
+These were variables whose names contained either ```mean``` or ```std```. We used ```grep``` to pull only those columns and combine with the first two columns.
 #### 3. Uses descriptive activity names to name the activities in the data set. 
 The ```y_test.txt``` and ```y_train.txt``` data files used activity IDs, so we substituted the activity labels (```WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING```) from ```activity_labels.txt``` to be more descriptive.
 #### 4. Appropriately labels the data set with descriptive variable names. 
